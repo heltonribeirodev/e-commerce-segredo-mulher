@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Catálogo — Segredos de Mulher</title>
+  <meta name="description" content="Veja todas as peças da Segredos de Mulher: vestidos, blusas, cropped, calças, saias, conjuntos e acessórios. Filtre por tamanho, cor e preço e peça pelo WhatsApp.">
+  <meta name="theme-color" content="#0D0D0D">
+  <link rel="icon" href="assets/img/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Segredos de Mulher">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Catálogo — Segredos de Mulher">
+  <meta property="og:description" content="Escolha suas peças e finalize seu pedido pelo WhatsApp.">
+  <meta property="og:url" content="https://SEU-DOMINIO.com.br/catalogo.html">
+  <meta property="og:image" content="https://SEU-DOMINIO.com.br/assets/img/brand/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/pages/catalogo.js" defer></script>
+</head>
+<body data-page="catalogo">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div id="site-header"></div>
+
+  <main id="conteudo">
+    <div class="container page-head">
+      <nav aria-label="Você está em"><ol class="breadcrumb" id="crumbs"><li><a href="index.html">Início</a></li><li aria-current="page">Catálogo</li></ol></nav>
+      <h1 class="page-title" id="catTitle">Todas as peças</h1>
+      <p class="page-count" id="catCount" role="status" aria-live="polite"></p>
+    </div>
+
+    <div class="toolbar">
+      <div class="container toolbar__inner">
+        <button class="btn btn--outline btn--sm toolbar__filter-btn" type="button" data-open="filters" aria-controls="filters" aria-expanded="false" id="filterBtn">Filtrar</button>
+        <p class="muted hide-mobile" id="toolbarCount" style="font-size:.875rem"></p>
+        <div class="toolbar__sort">
+          <label class="sr-only" for="sortSelect">Ordenar por</label>
+          <select class="select" id="sortSelect">
+            <option value="relevancia">Relevância</option>
+            <option value="novos">Mais novos</option>
+            <option value="menor-preco">Menor preço</option>
+            <option value="maior-preco">Maior preço</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="container catalog">
+      <!-- Filtros: barra lateral no desktop, painel inferior (bottom sheet) no celular -->
+      <aside class="filters" id="filters" aria-labelledby="filtersTitle" data-dialog-dynamic>
+        <div class="layer__head"><h2 class="layer__title" id="filtersTitle">Filtrar</h2><button class="icon-btn" type="button" data-close aria-label="Fechar filtros" id="filtersClose"></button></div>
+        <div class="filters__scroll">
+          <form id="filterForm" aria-label="Filtros do catálogo"></form>
+        </div>
+        <div class="filters__foot">
+          <button class="btn btn--outline btn--sm" type="button" id="filtersClear">Limpar</button>
+          <button class="btn btn--sm" type="button" data-close id="filtersApply">Ver peças</button>
+        </div>
+      </aside>
+
+      <div>
+        <div class="active-chips" id="activeChips" aria-label="Filtros ativos"></div>
+        <div class="grid-products" id="catGrid" data-stagger>
+          <!-- Skeleton exibido enquanto os scripts carregam -->
+          <div class="skeleton-card" aria-hidden="true"><div class="skeleton"></div><div class="skeleton skeleton-line" style="width:70%"></div><div class="skeleton skeleton-line" style="width:40%"></div></div>
+          <div class="skeleton-card" aria-hidden="true"><div class="skeleton"></div><div class="skeleton skeleton-line" style="width:70%"></div><div class="skeleton skeleton-line" style="width:40%"></div></div>
+          <div class="skeleton-card" aria-hidden="true"><div class="skeleton"></div><div class="skeleton skeleton-line" style="width:70%"></div><div class="skeleton skeleton-line" style="width:40%"></div></div>
+          <div class="skeleton-card" aria-hidden="true"><div class="skeleton"></div><div class="skeleton skeleton-line" style="width:70%"></div><div class="skeleton skeleton-line" style="width:40%"></div></div>
+        </div>
+        <div id="catEmpty" hidden></div>
+        <div class="load-more" id="loadMore" hidden>
+          <p id="loadMoreText"></p>
+          <div class="load-more__bar" aria-hidden="true"><span id="loadMoreBar"></span></div>
+          <button class="btn btn--outline" type="button" id="loadMoreBtn">Carregar mais</button>
+        </div>
+      </div>
+    </div>
+    <div style="height:72px"></div>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Meus favoritos — Segredos de Mulher</title>
+  <meta name="description" content="As peças que você favoritou na Segredos de Mulher, salvas neste aparelho.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0D0D0D">
+  <link rel="icon" href="assets/img/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/pages/favoritos.js" defer></script>
+</head>
+<body data-page="favoritos">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div id="site-header"></div>
+
+  <main id="conteudo">
+    <div class="container page-head">
+      <nav aria-label="Você está em"><ol class="breadcrumb"><li><a href="index.html">Início</a></li><li aria-current="page">Favoritos</li></ol></nav>
+      <div class="section-head" style="margin-bottom:0">
+        <div><h1 class="page-title">Meus <em>favoritos</em></h1><p class="page-count" id="favCount" role="status" aria-live="polite"></p></div>
+        <a class="btn btn--whatsapp btn--sm" id="favWa" href="#" hidden target="_blank" rel="noopener"></a>
+      </div>
+    </div>
+    <div class="container" style="padding-bottom:96px">
+      <p class="muted" style="font-size:.875rem;margin-bottom:24px">Seus favoritos ficam salvos neste aparelho e navegador.</p>
+      <div class="grid-products" id="favGrid" data-stagger></div>
+      <div id="favEmpty" hidden></div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

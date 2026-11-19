@@ -1,0 +1,6 @@
+# TODO(cliente): trocar SEU-DOMINIO.com.br pelo domínio real
+User-agent: *
+Allow: /
+Disallow: /favoritos.html
+
+Sitemap: https://SEU-DOMINIO.com.br/sitemap.xml

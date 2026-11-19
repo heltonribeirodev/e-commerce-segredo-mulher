@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Peça — Segredos de Mulher</title>
+  <meta name="description" content="Veja fotos, medidas e cores desta peça da Segredos de Mulher e peça pelo WhatsApp.">
+  <meta name="theme-color" content="#0D0D0D">
+  <link rel="icon" href="assets/img/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <!-- Pré-visualização genérica: sites estáticos não geram prévia por produto sem servidor -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Segredos de Mulher">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Segredos de Mulher — Moda feminina">
+  <meta property="og:description" content="Veja esta peça e peça pelo WhatsApp.">
+  <meta property="og:image" content="https://SEU-DOMINIO.com.br/assets/img/brand/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/pages/produto.js" defer></script>
+</head>
+<body data-page="produto">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div id="site-header"></div>
+
+  <main id="conteudo">
+    <div class="container" style="padding-top:20px">
+      <nav aria-label="Você está em"><ol class="breadcrumb" id="pdpCrumbs"><li><a href="index.html">Início</a></li><li><a href="catalogo.html">Catálogo</a></li></ol></nav>
+      <div class="pdp" id="pdp">
+        <div class="gallery" aria-hidden="true"><div class="gallery__main skeleton" style="aspect-ratio:3/4"></div></div>
+        <div class="pdp__info" aria-hidden="true"><div class="skeleton skeleton-line" style="width:60%;height:36px"></div><div class="skeleton skeleton-line" style="width:30%"></div></div>
+      </div>
+    </div>
+
+    <section class="section section--alt" id="lookSection" aria-labelledby="look-title" hidden>
+      <div class="container">
+        <div class="section-head"><div><p class="eyebrow eyebrow--line">Combina com</p><h2 class="section-title" id="look-title">Complete o <em>look</em></h2></div>
+          <div class="rail__nav"><button class="round-btn" type="button" data-rail-prev aria-label="Anterior"></button><button class="round-btn" type="button" data-rail-next aria-label="Próximo"></button></div></div>
+        <div class="rail"><div class="rail__track" id="lookTrack" data-stagger></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="relatedSection" aria-labelledby="related-title" hidden>
+      <div class="container">
+        <div class="section-head"><div><p class="eyebrow eyebrow--line">Para você</p><h2 class="section-title" id="related-title">Você também pode gostar</h2></div>
+          <div class="rail__nav"><button class="round-btn" type="button" data-rail-prev aria-label="Anterior"></button><button class="round-btn" type="button" data-rail-next aria-label="Próximo"></button></div></div>
+        <div class="rail"><div class="rail__track" id="relatedTrack" data-stagger></div></div>
+      </div>
+    </section>
+
+    <!-- Barra fixa inferior (celular) -->
+    <div class="buybar" id="buybar" aria-hidden="true"></div>
+
+    <!-- Visualização ampliada com pinça -->
+    <div class="layer lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Fotos ampliadas">
+      <div class="lightbox__bar"><span id="lbCounter"></span><button class="icon-btn" type="button" data-close aria-label="Fechar fotos ampliadas" id="lbClose"></button></div>
+      <div class="lightbox__stage" id="lbStage">
+        <img id="lbImg" src="data:," alt="">
+        <button class="round-btn lightbox__nav lightbox__nav--prev" type="button" id="lbPrev" aria-label="Foto anterior"></button>
+        <button class="round-btn lightbox__nav lightbox__nav--next" type="button" id="lbNext" aria-label="Próxima foto"></button>
+      </div>
+      <p class="lightbox__hint">Use dois dedos para ampliar · toque duplo para zoom</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>
