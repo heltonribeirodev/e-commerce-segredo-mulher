@@ -94,7 +94,7 @@
 
   const BADGES = { new: 'Novo', sale: 'Sale', low: 'Últimas peças', bestseller: 'Mais vendido' };
   function badgesHTML(p) {
-    if (isSoldOut(p)) return '<span class="badge badge--soldout">Esgotado</span>';
+    if (isSoldOut(p)) return '<span class="badge badge--soldout">Sem estoque</span>';
     const out = [];
     if (p.badge === 'sale' || discount(p)) out.push(`<span class="badge badge--sale">${discount(p) ? `-${discount(p)}%` : 'Sale'}</span>`);
     if (p.badge && p.badge !== 'sale') out.push(`<span class="badge badge--${p.badge}">${p.badge === 'bestseller' ? icon('sparkle', 'sparkle icon--fill') : ''}${BADGES[p.badge] || ''}</span>`);
@@ -912,18 +912,14 @@
         </a>
         <div class="card__badges">${badgesHTML(p)}</div>
         <button class="fav-btn" type="button" data-fav="${esc(p.id)}" aria-pressed="false" aria-label="Adicionar aos favoritos: ${esc(p.name)}">${icon('heart')}</button>
-        ${sold ? '<span class="card__soldout" aria-hidden="true">Esgotado</span>' : `<button class="card__quick-mobile" type="button" data-quick="${esc(p.id)}" aria-label="Escolher tamanho: ${esc(p.name)}">${icon('bagPlus')}</button>`}
-        <div class="card__panel">
-          <p class="card__sizes">${sizesLine(p)}</p>
-          ${sold ? `<a class="btn btn--sm btn--outline" href="${waHref(questionMessage(p, 'restock'))}" target="_blank" rel="noopener">Avise-me quando chegar</a>`
-                 : `<button class="btn btn--sm btn--block" type="button" data-quick="${esc(p.id)}">Escolher tamanho</button>`}
-        </div>
       </div>
       <div class="card__info">
+        ${swatches}
         <h3 class="card__name"><a href="${url}">${esc(p.name)}</a></h3>
         ${priceHTML(p)}
-        <p class="card__sizes">${sold ? 'Esgotado' : sizesLine(p)}</p>
-        ${swatches}
+        <p class="card__sizes">${sold ? 'Sem estoque' : sizesLine(p)}</p>
+        ${sold ? `<a class="btn btn--sm card__buy card__buy--out" href="${waHref(questionMessage(p, 'restock'))}" target="_blank" rel="noopener">Avise-me</a>`
+               : `<button class="btn btn--sm card__buy" type="button" data-quick="${esc(p.id)}" aria-label="Comprar ${esc(p.name)}">Comprar</button>`}
       </div>
     </article>`;
   }
